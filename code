@@ -1,0 +1,66 @@
+// SPDX-License-Identifier: GPL-3.0
+
+pragma solidity >=0.8.2 <0.9.0;
+
+/**
+ * @title Storage
+ * @dev Store & retrieve value in a variable
+ * @custom:dev-run-script ./scripts/deploy_with_ethers.ts
+ */
+contract Storage {
+
+    uint256 temperature;
+    uint256 Bpressure;
+    uint256 SPO2;
+    uint256 PulseOximeter;
+    uint256 HeartRate;
+    uint256 ETCO2;
+    
+
+    /**
+     * @dev Store value in variable
+     * @param num value to store
+     */
+    function StoreTemp(uint256 num) public {
+        temperature = num;
+        
+    }
+ function storeSPO2(uint256 num2) public {
+        SPO2 = num2;
+    }
+
+    function storeBPressure(uint256 num3) public {
+        Bpressure = num3;
+    }
+    function storePulseOximeter(uint256 num4) public {
+        PulseOximeter= num4;
+    }
+    function storeHeartRate(uint256 num4) public {
+        HeartRate = num4;
+    }
+    function storeETCO2(uint256 num5) public {
+        ETCO2 = num5;
+    }
+    /**
+     * @dev Return value 
+     * @return value of 'number'
+     */
+    function retrieveTemp() public view returns (uint256){
+        return temperature;
+        
+    }
+     function retrieveSPO2() public view returns (uint256){
+        return SPO2;
+    }
+    
+     function retrieveBPressure() public view returns (uint256){
+        return Bpressure;
+    }
+    function retrievePulseOximeter() public view returns (uint256){
+        return PulseOximeter;
+    }function retrieveHeartRate() public view returns (uint256){
+        return HeartRate;
+    }function retrieveETCO2() public view returns (uint256){
+        return ETCO2;
+    }
+}
